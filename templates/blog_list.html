@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog List</title>
+    <link rel="stylesheet" href="{% static 'blog_list.css' %}">
+    <style>
+      body {
+        background-color:#ffcc99;
+      }</style>
+</head>
+<body>
+    {% for blog in blog_list %}
+    <div class="card">
+        <div class="container">
+          <h4><b>{{blog.title}}</b></h4>
+          <p>{{blog.description}}</p>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+</body>
+</html>
